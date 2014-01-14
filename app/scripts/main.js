@@ -7,7 +7,7 @@ require.config({
   },
   
   paths: {
-  	jquery: 'vendor/jquery.min',
+  	jquery: 'vendor/jquery-1.10.2',
   	backbone: '../bower_components/backbone/backbone'
   }
 });
@@ -17,10 +17,7 @@ require(['backbone'], function(){
 
 console.log("hello2");
 
-require(['models/slide', 'views/slide'], function(SlideModel, SlideView){
-	var slide = new SlideModel({title: 'My First Slide'});
-	// console.log(slide);
-	var slideView = new SlideView({model: slide});
-	console.log(slideView);
+require(['views/app'], function(App){
+	new App();
 });
 
