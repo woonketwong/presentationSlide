@@ -9,7 +9,7 @@ define(['backbone', 'views/slide'], function(Backbone, SlideView){
 
 		hideAllButFirst: function() {
 			this.$el.children(':nth-child(n+2)').hide();
-		}
+		},
 
 		renderAll: function(){
 			this.$el.empty();
