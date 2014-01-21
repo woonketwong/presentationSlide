@@ -7,6 +7,8 @@ define(['backbone'], function(Backbone){
 				this.renderImage();
 			} else if (this.model.get('bullets')){
 				this.renderBullets();
+			} else if (this.model.get('quote')){
+				this.renderQuote();
 			} else {
 				this.renderHeading();
 			}
@@ -40,6 +42,23 @@ define(['backbone'], function(Backbone){
 			this.$el.append(
 				'<h1 class=' + this.model.get('size') + '>' + this.model.get('title') + '</h1>'
 			);
+		},
+
+		renderQuote: function(){
+			this.$el
+					.addClass('quote')
+					.append([,
+						'<figure>',
+							'<blockquote>',
+								this.model.get('quote'),
+							'</blockquote>',
+							'<figcaption>',
+								'<cite>',
+									this.model.get('cite'),
+								'</cite>',
+							'</figcaption>',
+						'</figure>'
+					].join(''));
 		}
 
 	});
