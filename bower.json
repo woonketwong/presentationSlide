@@ -2,7 +2,9 @@
   "name": "presentationslide",
   "private": true,
   "dependencies": {
-    "jquery": "~1.10.2"
+    "jquery": "~1.10.2",
+    "backbone": null,
+    "google-code-prettify": null
   },
   "devDependencies": {}
 }
